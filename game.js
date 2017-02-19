@@ -5,8 +5,8 @@ var leftPressed = false;
 var rightPressed = false;
 
 function keyup(event) {
-	if (event.keyCode == 37) {		
-		leftPressed = false;
+	if (event.keyCode == 37) {
+		leftPressed = false ;
 		if (!leftPressed && !rightPressed && !upPressed && !downPressed) {
 			player.className = 'character standLeft';
 		}
@@ -28,7 +28,7 @@ function keyup(event) {
 		if (!leftPressed && !rightPressed && !upPressed && !downPressed) {
 			player.className = 'character standDown';
 		}
-	}	
+	}
 }
 
 
@@ -56,7 +56,7 @@ function move() {
 
 
 function keydown(event) {
-	if (event.keyCode == 37) {		
+	if (event.keyCode == 37) {
 		leftPressed = true;
 	}
 	if (event.keyCode == 39) {
@@ -67,7 +67,7 @@ function keydown(event) {
 	}
 	if (event.keyCode == 40) {
 		downPressed = true;
-	}	
+	}
 }
 
 
@@ -86,9 +86,9 @@ function myLoadFunction() {
 	for (var i = 0; i < heads.length; i++) {
 		heads[i].addEventListener('click', setHead);
 	}
-	
+
 	var bodies = document.getElementsByClassName('bodies')[0].getElementsByTagName('li');
-	
+
 	for (var i = 0; i < heads.length; i++) {
 		bodies[i].addEventListener('click', setBody);
 	}
